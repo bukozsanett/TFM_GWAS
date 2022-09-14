@@ -1,0 +1,102 @@
+S
+#Plink code
+
+
+#hs_mecpp_cadj_Log2/MECPP
+
+
+./plink2 --bfile /Volumes/ws_helix/HELIX_preproc/gwas/Final_data_HRCimp_QC3/HELIX.impQC.rs.05.EUR --linear --pheno /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --pheno-name hs_mecpp_cadj_Log2  --covar /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --no-sex --covar-name PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --covar-variance-standardize PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --out /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/results/phthalates/MECPP
+
+
+
+#hs_mehhp_cadj_Log2/MEHHP
+
+./plink2 --bfile /Volumes/ws_helix/HELIX_preproc/gwas/Final_data_HRCimp_QC3/HELIX.impQC.rs.05.EUR --linear --pheno /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --pheno-name hs_mehhp_cadj_Log2 --covar /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --no-sex --covar-name PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --covar-variance-standardize PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --out /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/results/phthalates/MEHHP
+
+
+#hs_mehp_cadj_Log2/MEHP
+
+
+./plink2 --bfile /Volumes/ws_helix/HELIX_preproc/gwas/Final_data_HRCimp_QC3/HELIX.impQC.rs.05.EUR --linear --pheno /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --pheno-name hs_mehp_cadj_Log2 --covar /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --no-sex --covar-name PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --covar-variance-standardize PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --out /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/results/phthalates/MEHP
+
+
+
+
+
+##hs_meohp_cadj_Log2/MEOHP
+
+./plink2 --bfile /Volumes/ws_helix/HELIX_preproc/gwas/Final_data_HRCimp_QC3/HELIX.impQC.rs.05.EUR --linear --pheno /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --pheno-name hs_meohp_cadj_Log2 --covar /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --no-sex --covar-name PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --covar-variance-standardize PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --out /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/results/phthalates/MEOHP
+
+
+######################Ratios
+
+
+
+#MECPP_MEHP
+#HELIX_phtalates_cov_plink2.tsv
+
+
+./plink2 --bfile /Volumes/ws_helix/HELIX_preproc/gwas/Final_data_HRCimp_QC3/HELIX.impQC.rs.05.EUR --linear --pheno /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink2.tsv --pheno-name MECPP_MEHP --covar /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --no-sex --covar-name PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --covar-variance-standardize PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --out /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/results/phthalates/MECPP_MEHP
+
+
+#MEHHP_MEHP
+#HELIX_phtalates_cov_plink3.tsv
+
+
+./plink2 --bfile /Volumes/ws_helix/HELIX_preproc/gwas/Final_data_HRCimp_QC3/HELIX.impQC.rs.05.EUR --linear --pheno /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink3.tsv --pheno-name MEHHP_MEHP --covar /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --no-sex --covar-name PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --covar-variance-standardize PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --out /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/results/phthalates/MEHHP_MEHP
+
+
+
+#MEOHP_MEHP
+#HELIX_phtalates_cov_plink4.tsv
+
+./plink2 --bfile /Volumes/ws_helix/HELIX_preproc/gwas/Final_data_HRCimp_QC3/HELIX.impQC.rs.05.EUR --linear --pheno /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --pheno-name MEOHP_MEHP  --covar /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --no-sex --covar-name PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --covar-variance-standardize PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --out /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/results/phthalates/MEOHP_MEHP
+
+
+#MBZP/hs_mbzp_cadj_Log2
+
+plink2 --bfile /Volumes/ws_helix/HELIX_preproc/gwas/Final_data_HRCimp_QC3/HELIX.impQC.rs.05.EUR --linear --pheno /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --pheno-name hs_mbzp_cadj_Log2  --covar /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --no-sex --covar-name PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --covar-variance-standardize PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --out /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/results/phthalates/MBZP
+
+plink2 --bfile /home/isglobal.lan/zbuko/data/ws_helix/HELIX_preproc/gwas/Final_data_HRCimp_QC3/HELIX.impQC.rs.05.EUR --linear --pheno /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --pheno-name hs_mbzp_cadj_Log2  --covar /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --no-sex --covar-name PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --covar-variance-standardize PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --out /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/results/phthalates/MBZP
+
+
+
+
+
+#MEP/hs_mep_cadj_Log2
+
+./plink2 --bfile /Volumes/ws_helix/HELIX_preproc/gwas/Final_data_HRCimp_QC3/HELIX.impQC.rs.05.EUR --linear --pheno /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --pheno-name hs_mep_cadj_Log2  --covar /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --no-sex --covar-name PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --covar-variance-standardize PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --out /Volumes/ws_helix/HELIX_analyses/GWAS_chemical_exposure/results/phthalates/MEP
+
+
+plink2 --bfile /home/isglobal.lan/zbuko/data/ws_helix/HELIX_preproc/gwas/Final_data_HRCimp_QC3/HELIX.impQC.rs.05.EUR --linear --pheno /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --pheno-name hs_mep_cadj_Log2  --covar /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --no-sex --covar-name PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --covar-variance-standardize PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --out /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/results/phthalates/MEP
+
+
+
+#MIBP/hs_mibp_cadj_Log2
+
+plink2 --bfile /home/isglobal.lan/zbuko/data/ws_helix/HELIX_preproc/gwas/Final_data_HRCimp_QC3/HELIX.impQC.rs.05.EUR --linear --pheno /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --pheno-name hs_mibp_cadj_Log2  --covar /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --no-sex --covar-name PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --covar-variance-standardize PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --out /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/results/phthalates/MIBP
+
+plink2 --bfile /home/isglobal.lan/mbustamante/data/ws_helix/HELIX_preproc/gwas/Final_data_HRCimp_QC3/HELIX.impQC.rs.05.EUR --linear --pheno /home/isglobal.lan/mbustamante/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --pheno-name hs_mibp_cadj_Log2  --covar /home/isglobal.lan/mbustamante/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --no-sex --covar-name PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --covar-variance-standardize PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --out /home/isglobal.lan/mbustamante/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/results/phthalates/MIBP
+
+
+
+#MNBP/hs_mnbp_cadj_Log2
+
+
+plink2 --bfile /home/isglobal.lan/zbuko/data/ws_helix/HELIX_preproc/gwas/Final_data_HRCimp_QC3/HELIX.impQC.rs.05.EUR --linear --pheno /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --pheno-name hs_mnbp_cadj_Log2  --covar /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --no-sex --covar-name PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --covar-variance-standardize PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --out /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/results/phthalates/MNBP
+
+#OHMNP/hs_ohminp_cadj_Log2
+
+plink2 --bfile /home/isglobal.lan/zbuko/data/ws_helix/HELIX_preproc/gwas/Final_data_HRCimp_QC3/HELIX.impQC.rs.05.EUR --linear --pheno /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --pheno-name hs_ohminp_cadj_Log2  --covar /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --no-sex --covar-name PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --covar-variance-standardize PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --out /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/results/phthalates/OHMNP
+
+
+#OXOMNP/hs_oxominp_cadj_Log2
+
+plink2 --bfile /home/isglobal.lan/zbuko/data/ws_helix/HELIX_preproc/gwas/Final_data_HRCimp_QC3/HELIX.impQC.rs.05.EUR --linear --pheno /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --pheno-name hs_oxominp_cadj_Log2  --covar /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/db/HELIX_phtalates_cov_plink.txt --no-sex --covar-name PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --covar-variance-standardize PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, e3_sex, hs_child_age_days_None --out /home/isglobal.lan/zbuko/data/ws_helix/HELIX_analyses/GWAS_chemical_exposure/results/phthalates/OXOMNP
+
+
+
+
+
+
+
