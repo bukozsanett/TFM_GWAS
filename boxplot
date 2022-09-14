@@ -1,0 +1,118 @@
+chem<-read.csv("chem.txt",sep="\t",header=T)
+chem<-chem[1:4]
+
+head(chem)
+png("Chem_level_boxplot.png")
+boxplot(chem,col=c("gold","darkgreen"),names=c("MECPP","MEHHP","MEHP","MEOHP"), main="Chemical levels")
+dev.off()
+
+plink<-read.csv("HELIX_phtalates_cov_plink.txt",sep="\t",header=T)
+
+head(plink)
+
+#get chemicals and covariates
+
+dim(plink)
+
+MBZP<-plink$hs_mbzp_cadj_Log2
+
+head(MBZP)
+
+MECPP<-plink$hs_mecpp_cadj_Log2
+
+head(MECPP)
+
+MEHHP<-plink$hs_mehhp_cadj_Log2
+
+head(MEHHP)
+
+MEHP<-plink$hs_mehp_cadj_Log2
+
+head(MEHP)
+
+MEOHP<-plink$hs_meohp_cadj_Log2
+
+head(MEOHP)
+
+MEP<-plink$hs_mep_cadj_Log2
+
+head(MEP)
+
+MIBP<-plink$hs_mibp_cadj_Log2
+
+head(MIBP)
+
+MNBP<-plink$hs_mnbp_cadj_Log2
+
+head(MNBP)
+
+
+#Ratios
+
+MEHHP_MEHP<-plink$MEHHP_MEHP
+
+head(MEHHP_MEHP)
+
+MEOHP_MEHP<-plink$MEOHP_MEHP
+
+head(MEOHP_MEHP)
+
+MECPP_MEHP<-plink$MECPP_MEHP
+
+head(MECPP_MEHP)
+
+###bind the data together
+
+chemical_levels<-cbind(MBZP,MECPP,MEHHP,MEHP,MEOHP,MEP,MIBP,MNBP,MEHHP_MEHP,MEOHP_MEHP,MECPP_MEHP)
+
+png("Chem_all_level_boxplot.png")
+boxplot(chemical_levels,col=c("gold","darkgreen"),names=c("MBZP","MECP","MEHHP","MEHP","MEOHP","MEP","MIBP","MNBP","MEHHP/","MEOHP/","MECPP/"), main="Chemical levels")
+dev.off()
+
+###histogram
+
+
+png("MBZP_hist.png")
+hist(plink$hs_mbzp_cadj_Log2, main="Distribution of MBZP",xlab="Measured MBZP")
+dev.off()
+
+png("MECPP_hist.png")
+hist(plink$hs_mecpp_cadj_Log2, main="Distribution of MECPP",xlab="Measured MECPP")
+dev.off()
+
+png("MEHHP_hist.png")
+hist(plink$hs_mehhp_cadj_Log2, main="Distribution of MEHHP",xlab="Measured MEHHP")
+dev.off()
+
+png("MEHP_hist.png")
+hist(plink$hs_mehp_cadj_Log2, main="Distribution of MEHP",xlab="Measured MEHP")
+dev.off()
+
+png("MEOHP_hist.png")
+hist(plink$hs_meohp_cadj_Log2, main="Distribution of MEOHP",xlab="Measured MEOHP")
+dev.off()
+
+png("MEP_hist.png")
+hist(plink$hs_mep_cadj_Log2, main="Distribution of MEP",xlab="Measured MEP")
+dev.off()
+
+png("MIBP_hist.png")
+hist(plink$hs_mibp_cadj_Log2, main="Distribution of MIBP",xlab="Measured MIBP")
+dev.off()
+
+png("MNBP_hist.png")
+hist(plink$hs_mnbp_cadj_Log2, main="Distribution of MNBP",xlab="Measured MNBP")
+dev.off()
+
+png("MEHHP_MEHP_hist.png")
+hist(plink$MEHHP_MEHP, main="Distribution of MEHHP/MEHP",xlab="Measured MEHHP/MEHP")
+dev.off()
+
+png("MEOHP_MEHP_hist.png")
+hist(plink$MEOHP_MEHP, main="Distribution of MEOHP/MEHP",xlab="Measured MEOHP/MEHP")
+dev.off()
+
+png("MECPP_MEHP_hist.png")
+hist(plink$MECPP_MEHP,main="Distribution of MECPP/MEHP",xlab="Measured MECPP/MEHP")
+dev.off()
+
